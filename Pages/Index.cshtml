@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form method="post" style="">
+        <label>Key Words(, deliminated):</label><input name="keyWordsInput" value="e-settlement"/> <label>Url: </label><input name="urlInput" value="sympli.com.au"/>
+        <input type="submit" value="Submit" asp-page-handler="Submit" />
+    </form>
+    <p>@ViewData["GoogleResult"]</p>
+    <p>@ViewData["BingResult"]</p>
+</div>
