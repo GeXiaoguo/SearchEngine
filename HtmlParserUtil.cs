@@ -18,6 +18,8 @@ namespace SearchEngine
                     var br = sender as WebBrowser;
                     var rank = parseRank(br.Document);
                     taskCompletionSource.SetResult(rank);
+                    br.Dispose();
+                    Application.Exit();
                 };
                 Application.Run();
             });
